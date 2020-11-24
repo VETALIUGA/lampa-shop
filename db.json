@@ -1,0 +1,22 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "Vacuum cleaner",
+            "description": "So powerful cleaner for your flat!",
+            "price": 300
+        },
+        {
+            "id": 2,
+            "title": "Vacuum cleaner",
+            "description": "So powerful cleaner for your flat!",
+            "price": 300
+        },
+        {
+            "id": 3,
+            "title": "Vacuum cleaner",
+            "description": "So powerful cleaner for your flat!",
+            "price": 300
+        }
+    ]
+}
