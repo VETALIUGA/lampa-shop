@@ -7,7 +7,13 @@ import { store } from './redux/store'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import './styles/Global.scss'
+import {database} from './firebase'
 
+database.ref('/goods/').once('value').then((snapshot) => {
+  // var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
+  console.log(snapshot.val());
+  // ...
+})
 
 ReactDOM.render(
   <React.StrictMode>
