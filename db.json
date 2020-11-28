@@ -2,21 +2,17 @@
     "goods": [
         {
             "id": 1,
-            "title": "Vacuum cleaner",
-            "description": "So powerful cleaner for your flat!",
-            "price": 300
+            "title": "Mi Electric Scooter Essential Black",
+            "description": "Компания Xiaomi представляет новую модель в линейки электрических самокатов — электросамокат Xiaomi Mi Electric Scooter Essential, который представляет собой обновлённую версию очень популярного предшественника. Наибольшее обновление произошло в конструкции и дизайне скутера. Также новым является индикатор, который загорается в случае автоматического обнаружения неисправности устройства. Xiaomi Mi Scooter Essential получил 250 Вт двигатель и максимальную скорость 20 км/ч. Емкость его аккумулятора составляет 5100 мА*ч. Этого хватит на преодоления расстояния до 20 км.",
+            "price": 9999,
+            "manufacturer": "Xiaomi"
         },
         {
             "id": 2,
             "title": "Vacuum cleaner",
             "description": "So powerful cleaner for your flat!",
-            "price": 300
-        },
-        {
-            "id": 3,
-            "title": "Vacuum cleaner",
-            "description": "So powerful cleaner for your flat!",
-            "price": 300
+            "price": 300,
+            "manufacturer": "Xiaomi"
         }
     ]
 }
