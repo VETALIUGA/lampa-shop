@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import s from './GoodsGrid.module.scss'
 import { database } from '../../firebase'
+import Button from '../../components/UI/Button/Button'
 
 
 const GoodsGrid = (props) => {
@@ -15,7 +16,13 @@ const GoodsGrid = (props) => {
         <div className={s.grid}>
             {goods &&
                 goods.map(item => (
-                    <div className={s.grid__item} key={item.id}>{item.title}</div>
+                    <div className={s.grid__item} key={item.id}>
+                        <img className={s.grid__image} src={item.imgUrl} alt="" />
+                        <div className={s.grid__wrap_inner}>
+                            <span className={s.grid__title}>{item.title}</span>
+                            <Button title="До кошика" />
+                        </div>
+                    </div>
                 ))}
         </div>
     )

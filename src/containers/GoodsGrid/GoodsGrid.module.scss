@@ -1,9 +1,34 @@
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px 10px;
+@import '../../styles/Variables.scss';
 
-    // &__item {
-    //     border: 1px solid gray;
-    // }
+.grid {
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+
+    &__item {
+        border: 1px solid $border-colored;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+        
+    }
+    &__image {
+        width: 100%;
+        display: block;
+    }
+    &__title {
+        display: block;
+        margin: 20px 0;
+        color: $font-dark;
+    }
+    &__wrap {
+        &_inner {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
 }

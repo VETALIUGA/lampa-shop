@@ -5,7 +5,6 @@ import GoodsGrid from '../../containers/GoodsGrid/GoodsGrid'
 const HomePage = (props) => {
     return (
         <MainWrapper>
-            <div>HomePage</div>
             <GoodsGrid />
         </MainWrapper>
     )

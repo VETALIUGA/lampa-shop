@@ -1,8 +1,9 @@
 import React from 'react'
+import s from './Button.module.scss'
 
 const Button = ({title}) => {
     return (
-        <button>{title}</button>
+        <button className={`${s.button} text--md`}>{title}</button>
     )
 }
 
