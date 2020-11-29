@@ -31,7 +31,7 @@ const CartGoodsList = (props) => {
                             props.goodsInCart.map((item) => (
                                 <tr className={s.grid__item} key={item.id}>
                                     <td className={`text--md`}>{item.title}</td>
-                                    <td>{item.price} ₴</td>
+                                    <td>{item.price}&nbsp;₴</td>
                                     <td>{item.amount}</td>
                                     <td>
                                         <RangeButtons
