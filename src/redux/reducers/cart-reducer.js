@@ -51,10 +51,10 @@ export default function (state = initialState, action) {
         }
 
         case GET_GOODS_FROM_STORAGE: {
-            const cartFromStorage = JSON.parse(localStorage.getItem('goodsInCart'))
+            const cartFromStorage = JSON.parse(localStorage.getItem('goodsInCart')) || []
             return {
                 ...state,
-                goodsInCart: cartFromStorage || [],
+                goodsInCart: cartFromStorage,
                 cartSum: countCommonPrice(cartFromStorage),
                 commonAmount: countCommonAmount(cartFromStorage)
             }
