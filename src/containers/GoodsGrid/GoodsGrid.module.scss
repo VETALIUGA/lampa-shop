@@ -1,9 +1,61 @@
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px 10px;
+@import "../../styles/Variables.scss";
 
-    // &__item {
-    //     border: 1px solid gray;
-    // }
+.grid {
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    &__item {
+        border: 1px solid $border-colored;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        flex-grow: 1;
+        position: relative;
+        &::after {
+            content: attr(data-cart);
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 5px 20px;
+            display: block;
+            border: 1px solid $border-dark;
+        }
+    }
+    &__image {
+        width: 100%;
+        display: block;
+    }
+    &__title {
+        display: block;
+        margin: 20px 5px;
+        color: $font-dark;
+        flex: 1 1 100%;
+    }
+    &__price {
+        flex: 1 1 50px;
+        margin: 0 5px;
+        color: $font-gray;
+    }
+    &__wrap {
+        &_inner {
+            margin: 0 -5px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+    }
+    &__button {
+        margin: 0 5px;
+    }
+}
+
+.loader {
+    &__wrap {
+        min-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

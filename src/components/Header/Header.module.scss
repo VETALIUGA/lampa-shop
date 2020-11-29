@@ -1,0 +1,37 @@
+@import '../../styles/Variables.scss';
+
+.section {
+    padding: 20px 0;
+    background-color: $background-colored;
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    font-weight: 600;
+    color: $font-dark;
+}
+
+.nav {
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+    &__item {
+        margin: 0 10px;
+        line-height: 1;
+        text-decoration: none;
+        color: $font-dark;
+        // &:hover {
+        //     text-decoration: underline;
+        // }
+    }
+    &__price {
+        margin-left: 10px;
+    }
+}

@@ -1,13 +1,18 @@
 import React from 'react'
-import MainWrapper from '../../components/MainWrapper/MainWrapper'
+import { Helmet } from 'react-helmet'
+import MainWrapper from '../../containers/MainWrapper/MainWrapper'
 import GoodsGrid from '../../containers/GoodsGrid/GoodsGrid'
 
 const HomePage = (props) => {
     return (
-        <MainWrapper>
-            <div>HomePage</div>
-            <GoodsGrid />
-        </MainWrapper>
+        <>
+            <Helmet>
+                <title>Shop</title>
+            </Helmet>
+            <MainWrapper>
+                <GoodsGrid />
+            </MainWrapper>
+        </>
     )
 }
 

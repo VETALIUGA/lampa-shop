@@ -1,0 +1,30 @@
+@import "../../../styles/Variables.scss";
+
+.button {
+    border: 1px solid $border-dark;
+    border-radius: 0;
+    background-color: $background-white;
+    padding: 10px 25px;
+    display: block;
+    line-height: 1;
+    color: $font-dark;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    outline: none;
+    &:not(:disabled):hover {
+        background-color: $background-dark;
+        color: $font-light;
+    }
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.3;
+    }
+}
+
+.warning {
+    border: 1px solid $border-danger;
+    color: $font-danger;
+    &:not(:disabled):hover {
+        background-color: $background-danger;
+    }
+}

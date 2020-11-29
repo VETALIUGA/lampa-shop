@@ -1,0 +1,32 @@
+@import "../../styles/Variables.scss";
+
+.grid {
+    border-collapse: collapse;
+    width: 100%;
+    &__item {
+        border: 1px solid $border-colored;
+        text-align: left;
+        td,
+        th {
+            padding: 20px;
+            
+        }
+    }
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.empty {
+    &__text {
+        text-align: center;
+        color: $font-gray;
+    }
+}
+
+.total {
+    margin-top: 20px;
+    text-align: right;
+}

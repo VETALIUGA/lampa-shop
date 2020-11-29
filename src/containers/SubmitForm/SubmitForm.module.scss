@@ -1,0 +1,44 @@
+@import '../../styles/Variables.scss';
+
+.title {
+    text-align: center;
+}
+
+.form {
+    &__input {
+        width: 100%;
+        border-radius: 0;
+        border: 1px solid $border-colored;
+        padding: 10px;
+        transition: border-color .3s;
+        &:focus {
+            outline: none;
+            border-color: $border-dark;
+        }
+    }
+    &__button {
+        margin-top: 20px;
+        border: 1px solid $border-dark;
+        background-color: $background-white;
+        color: $font-dark;
+        padding: 10px;
+        width: 100%;
+        cursor: pointer;
+        transition: background-color .3s, color .3s;
+        text-transform: uppercase;
+        &:not(:disabled) {
+            &:hover {
+                background-color: $background-dark;
+                color: $font-light;
+            }
+        }
+        &:disabled {
+            cursor: not-allowed;
+            color: $font-gray;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    
+}

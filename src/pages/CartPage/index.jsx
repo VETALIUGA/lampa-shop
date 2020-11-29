@@ -1,11 +1,27 @@
 import React from 'react'
-import MainWrapper from '../../components/MainWrapper/MainWrapper'
+import { Helmet } from 'react-helmet'
+import MainWrapper from '../../containers/MainWrapper/MainWrapper'
+import CartGoodsList from '../../containers/CartGoodsList/CartGoodsList'
+import SubmitForm from '../../containers/SubmitForm/SubmitForm'
+import s from './CartPage.module.scss'
 
 const CartPage = (props) => {
     return (
-        <MainWrapper>
-            <div>CartPage</div>
-        </MainWrapper>
+        <>
+            <Helmet>
+                <title>Cart</title>
+            </Helmet>
+            <MainWrapper>
+                <div className={s.grid}>
+                    <div className={s.grid__item}>
+                        <CartGoodsList />
+                    </div>
+                    <div className={s.grid__item}>
+                        <SubmitForm />
+                    </div>
+                </div>
+            </MainWrapper>
+        </>
     )
 }
 
