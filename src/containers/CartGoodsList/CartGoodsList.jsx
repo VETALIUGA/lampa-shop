@@ -21,8 +21,8 @@ const CartGoodsList = (props) => {
                     <thead>
                         <tr className={s.grid__item} >
                             <th>Name</th>
-                            <th>Amount</th>
                             <th>Price</th>
+                            <th>Amount</th>
                             <th>Remove</th>
                         </tr>
                     </thead>
