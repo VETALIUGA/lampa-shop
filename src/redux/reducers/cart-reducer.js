@@ -54,7 +54,7 @@ export default function (state = initialState, action) {
             const cartFromStorage = JSON.parse(localStorage.getItem('goodsInCart'))
             return {
                 ...state,
-                goodsInCart: cartFromStorage,
+                goodsInCart: cartFromStorage || [],
                 cartSum: countCommonPrice(cartFromStorage),
                 commonAmount: countCommonAmount(cartFromStorage)
             }
