@@ -1,4 +1,4 @@
-import { ADD_NEW_GOOD_TO_CART, GET_GOODS_FROM_STORAGE, REMOVE_GOOD_FROM_CART } from "./actionTypes"
+import { ADD_NEW_GOOD_TO_CART, GET_GOODS_FROM_STORAGE, REMOVE_GOODS_FROM_CART, REMOVE_GOOD_FROM_CART } from "./actionTypes"
 
 export const addNewGoodToCart = (goodItem) => {
     return {
@@ -17,5 +17,11 @@ export const removeGoodFromCart = (id) => {
 export const addGoodsFromStorage = () => {
     return {
         type: GET_GOODS_FROM_STORAGE
+    }
+}
+
+export const removeGoodsFromCart = () => {
+    return {
+        type: REMOVE_GOODS_FROM_CART
     }
 }

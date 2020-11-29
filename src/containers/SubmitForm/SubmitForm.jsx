@@ -2,12 +2,17 @@ import React, { useState } from 'react'
 import s from './SubmitForm.module.scss'
 import { connect } from 'react-redux'
 import { Field, reduxForm } from 'redux-form'
+import { removeGoodsFromCart } from '../../redux/actions/cart-actions'
 
 const SubmitForm = (props) => {
     const [json, setJson] = useState('')
     const submit = (value) => {
-        console.log(value);
-        setJson(JSON.stringify(value, null, 2))
+        const confirmJson = {
+            ...value,
+            ...props.cart
+        }
+        props.onRemoveGoodsFromCart()
+        setJson(JSON.stringify(confirmJson, null, 2))
     }
     const { handleSubmit, pristine, submitting } = props
     return (
@@ -67,7 +72,7 @@ const SubmitForm = (props) => {
                     </div>
                 </div>
                 <div>
-                    <button className={s.form__button} type="submit" disabled={pristine || submitting || !props.goodsInCart.length}>
+                    <button className={s.form__button} type="submit" disabled={pristine || submitting || !props.cart.goodsInCart.length}>
                         <span>Order</span>
                     </button>
                 </div>
@@ -80,12 +85,18 @@ const SubmitForm = (props) => {
 }
 
 const mapStateToProps = state => {
-    const {cart} = state
+    const { cart } = state
     return {
-        ...cart
+        cart
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        onRemoveGoodsFromCart: () => dispatch(removeGoodsFromCart())
     }
 }
 
 export default reduxForm({
     form: 'simple' // a unique identifier for this form
-})(connect(mapStateToProps, null)(SubmitForm))
+})(connect(mapStateToProps, mapDispatchToProps)(SubmitForm))

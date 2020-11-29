@@ -1,4 +1,4 @@
-import { ADD_NEW_GOOD_TO_CART, GET_GOODS_FROM_STORAGE, REMOVE_GOOD_FROM_CART } from "../actions/actionTypes";
+import { ADD_NEW_GOOD_TO_CART, GET_GOODS_FROM_STORAGE, REMOVE_GOOD_FROM_CART, REMOVE_GOODS_FROM_CART } from "../actions/actionTypes";
 
 const initialState = {
     goodsInCart: [],
@@ -47,6 +47,14 @@ export default function (state = initialState, action) {
                 ...state,
                 cartSum: countCommonPrice(state.goodsInCart),
                 commonAmount: countCommonAmount(state.goodsInCart)
+            }
+        }
+
+        case REMOVE_GOODS_FROM_CART: {
+            console.log('remove');
+            localStorage.removeItem('goodsInCart')
+            return {
+                ...initialState
             }
         }
 
